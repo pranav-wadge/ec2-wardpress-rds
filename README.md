@@ -36,7 +36,7 @@ This project automates the deployment of a WordPress site on an AWS EC2 instance
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/joshiharshal/EC2-RDS-Wordpress.git
+git clone https://github.com/pranav-wadge/EC2-RDS-Wordpress.git
 cd EC2-RDS-Wordpress
 
 ```
