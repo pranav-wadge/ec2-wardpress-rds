@@ -87,8 +87,8 @@ ROOT_DOMAIN=
 
 
 ### 3. Access WordPress
-- Website: [http://harshal.joshiharshal.cloud](http://harshal.joshiharshal.cloud)
-- Admin Panel: [http://harshal.joshiharshal.cloud/wp-admin](http://harshal.joshiharshal.cloud/wp-admin)
+- Website: [http://harshal.joshiharshal.cloud](http://pranavwadge.cloud)
+- Admin Panel: [http://harshal.joshiharshal.cloud/wp-admin](http://pranavwadge.cloud/wp-admin)
 - Admin Credentials:
   - Username: `admin`
   - Password: `Admin@123`
@@ -101,4 +101,4 @@ terraform destroy -auto-approve
 ```
 
 ## Author
-- **Harshal Joshi** - [GitHub](https://github.com/joshiharshal)
+- **Harshal Joshi** - [GitHub](https://https://github.com/pranav-wadge/
