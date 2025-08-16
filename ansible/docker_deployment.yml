@@ -1,0 +1,63 @@
+- name: Install Docker and Deploy WordPress
+  hosts: server
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install required system packages
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+        update_cache: true
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu focal stable
+        state: present
+
+    - name: Install Docker and Docker Compose
+      apt:
+        pkg:
+          - docker-ce
+          - docker-ce-cli
+          - docker-compose-plugin
+          - docker-buildx-plugin
+        state: present
+        update_cache: true
+
+    - name: Ensure Docker service is running
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Add current user to docker group
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+
+<<<<<<< HEAD
+    
+=======
+   
+
+        
+            
+   
+
+
+
+   
+>>>>>>> 2b7c8b0 (update this files)
